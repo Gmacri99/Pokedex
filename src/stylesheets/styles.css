@@ -1,0 +1,261 @@
+
+@font-face {
+    font-family: "Inter";
+    src:url("../fonts/Inter-Light.ttf");
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src:url("../fonts/Roboto-Light.ttf");
+  }
+
+
+.card{
+    background-color: rgba(234, 247, 247, 0.849);
+    height: 420px;
+    border-radius: 10px;
+    box-shadow:2px 3px 10px rgb(37, 36, 36) ;
+    padding: 10px 30px 45px 30px ;
+    margin: 40px 30px;
+    cursor: pointer;
+    transition: transform 1.2s;
+}
+
+.card:hover{
+transform: scale(1.1);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.card-fire{
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(196, 81, 81));
+}
+
+.card-water{
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(6, 112, 250));
+}
+
+.card-grass{
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(16, 161, 3));
+}
+
+.card-bug{
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(124, 214, 6));
+}
+
+.card-normal{
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(97, 96, 96));
+}
+
+.card-poison{
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(139, 36, 143));
+}
+
+.card-ghost{
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(82, 18, 119));
+}
+
+.card-electric{
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(184, 196, 15));
+}
+
+.card-psychic{
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(132, 141, 6));
+}
+
+.card-ground{
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(196, 118, 15));
+}
+
+.card-fighting{
+    background: linear-gradient(to top, rgb(255, 255, 255),rgb(58, 111, 121));
+}
+
+.card-fairy{
+    background: linear-gradient(to top, rgb(255, 255, 255),rgb(199, 92, 158));
+}
+
+.card-rock{
+    background: linear-gradient(to top, rgb(255, 255, 255),rgb(91, 95, 95));
+}
+
+.card-text{
+    font-family:"Roboto";
+    font-size: 22px;
+    font-weight:bold;
+}
+
+.card-text-title{
+    text-shadow:2px 2px 16px rgb(0, 0, 0)
+}
+
+img{
+    height: 240px;
+    width: 240px;
+}
+
+.type-pok{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.type{
+    padding: 5px 15px;
+    box-shadow:1px 1px 10px rgb(131, 128, 128) ;
+    background-color: rgba(153, 187, 187, 0.274);
+    border-radius: 6px;
+    color: rgb(255, 235, 235);
+}
+
+.type-fire{
+    background-color: rgb(228, 3, 3);
+}
+
+.type-normal{
+    background-color: rgb(97, 96, 96);
+}
+
+.type-poison{
+    background-color: rgb(179, 5, 214);
+}
+
+.type-flying{
+    background-color: rgb(86, 192, 181);
+}
+
+.type-grass{
+    background-color: rgb(16, 161, 3);
+}
+
+.type-bug{
+    background-color: rgb(124, 214, 6);
+}
+
+.type-water{
+    background-color: rgb(6, 112, 250);
+}
+
+.type-electric{
+    background-color: rgb(224, 221, 14);
+}
+
+.type-psychic{
+    background-color: rgb(182, 179, 7);
+}
+
+.type-ground{
+    background-color: rgb(182, 112, 7);
+}
+
+.type-fighting{
+    background-color: rgb(58, 111, 121);
+}
+
+.type-fairy{
+    background-color: rgb(199, 92, 158);
+}
+
+.type-rock{
+    background-color: rgb(91, 95, 95);
+}
+
+
+/*styles of header*/
+
+.header{
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-title{
+    background-color: azure;
+    display: block;
+    margin: auto;
+}
+
+.content-title{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    justify-content: space-around;
+}
+
+.img-title{
+    height: 60px;
+    width: 60px;
+    padding-right: 20px;
+}
+
+.text-title{
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.2px;
+    letter-spacing: 1.2px;
+    text-shadow:2px 2px 26px rgb(0, 0, 0)
+}
+
+.form{
+    display:flex ;
+    align-items: center;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.img-form{
+    height: 60px;
+    width: 60px;
+    padding-right: 20px;
+}
+
+.form-input{
+    height: 36px;
+    width: 240px;
+    border-radius: 8px;
+    border: none;
+    font-family: "Roboto";
+    font-size: 22px;
+    box-shadow:1px 1px 10px rgb(131, 128, 128) ;
+    outline:2px auto ;
+    outline-color: rgba(75, 129, 173, 0);    
+}
+
+.form-button{
+    border: none;
+    background: none;
+    margin-left: 15px;
+}
+
+.nav{
+    background-color: rgb(0, 0, 0);
+    padding: 5px;
+    box-shadow:1px 1px 10px rgb(0, 0, 0) ;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.list-item{
+    font-size: 30px;
+    list-style:none;
+    font-family: "Roboto";
+}
+
+.a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-shadow:1px 1px 10px rgb(255, 255, 255)
+}
