@@ -6,3 +6,27 @@ body{
 
 .App{
 }
+
+.Pag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.Pag-element{
+    padding: 5px 60px;
+    background-color: rgb(255, 255, 255);
+    margin:10px 40px;
+    border-radius: 10px;
+    box-shadow:1px 1px 10px rgb(0, 0, 0) ;
+    font-size: 22px;
+    border: solid 2px rgb(5, 5, 46);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.6s;
+    transform-origin: bottom right;
+}
+
+.Pag-element:hover{
+  background-color:rgb(110, 163, 223) ;
+}

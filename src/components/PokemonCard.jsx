@@ -1,5 +1,5 @@
 import React from "react";
-import styles from '../stylesheets/styles.css';
+import '../stylesheets/styles.css';
 
 const Pokemon=({id,name,image,type,type1})=>{
 
