@@ -1,7 +1,7 @@
 import React from "react";
 import  "../stylesheets/styles.css";
 
-function Header({title,image,imagef,poke,name}){
+function Header({title,image,imagef,poke,name,id}){
     return(
         <div className="header">
             <div className="container-title">
@@ -12,7 +12,7 @@ function Header({title,image,imagef,poke,name}){
             </div>
             <div>
                 <form className="form" onSubmit={poke}>
-                    <input type="text" className="form-input" placeholder="Pokemon..." onChange={name}/>
+                    <input type="text" className="form-input" placeholder="Pokemon..." onChange={name} id={id}/>
                     <button className="form-button"><img src={imagef} alt="" className="img-form"/></button>
                 </form>
             </div>
