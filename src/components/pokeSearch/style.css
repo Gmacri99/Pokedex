@@ -1,0 +1,41 @@
+.input-search{
+    width: 90%;
+    height: 90%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    border-radius: 10px;
+}
+
+.div-input{
+    height: 3rem;
+    width: 40%;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.input-search input{
+    width: 90%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    padding-left: .25rem;
+    background-color: transparent;
+    outline: none;
+}
+
+.icon-search {
+    position: absolute;
+    top: 50%;
+    right: 2.5%;
+    transform: translateY(-50%);
+    color: red;
+    font-size: 1rem;
+  }
+  
