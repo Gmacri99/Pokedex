@@ -1,19 +1,18 @@
-import { useState } from 'react'
 import './style.css'
-import Logo from './Logo'
+import Logo from './logo/Logo'
 import Language from './language'
+import SearchBar from './pokeSearch'
 
 
 const Navbar = () => {
 
-    const [color,setColor] = useState('white')
-
   return (
-    <div className='navbar'>
-        <div>
-            <Logo color={color}/>
-            <Language />
-            
+    <div className='navbar center-content'>
+        <div className='navbar-container center-content'>
+          <Logo/>
+          <div className='search-navbar center-content'>
+            <SearchBar/>                
+          </div>
         </div>
     </div>
   )

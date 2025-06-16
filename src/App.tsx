@@ -47,8 +47,6 @@ function App() {
   return (
     <>
       <Navbar/>
-      <HeroSection name={pokemons[0]?.name} url={pokemons[0]?.url} types={pokemons[0]?.types}/>
-      <SearchBar/>
     </>
   )
 }

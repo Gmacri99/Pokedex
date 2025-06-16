@@ -6,8 +6,10 @@ const SearchBar = () => {
     <>
     <div className='div-input'>
         <div className='input-search'>
-            <input type="text" placeholder='pokemon'/>
-            <HiOutlineSearch className="icon-search" />
+            <input type="text" placeholder='Search a pokémon'/>
+            <button className='container-icon center-content'>
+              <HiOutlineSearch className="icon-search" />
+            </button>
         </div>
     </div>
     </>
