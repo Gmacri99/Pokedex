@@ -1,0 +1,14 @@
+.selector-language{
+    width: 40%;
+    height: 65%;
+    gap: .5rem;
+    border: 0.87px solid #42537C;
+    border-radius: 100px;
+    background-color:#343E62 ;
+    cursor: pointer;
+}
+
+.btn-selector{
+    border: none;
+    background-color: transparent;
+}

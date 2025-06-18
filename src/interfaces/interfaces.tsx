@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface Datainfo {
     name:string,
     url:string,
@@ -16,7 +18,7 @@ export interface LanguageSelect{
     numberPokeAPI:number,
     name:string,
     abbreviation:string,
-    image:string,
+    image:ReactNode,
 }
 
 export interface TypePokemon{

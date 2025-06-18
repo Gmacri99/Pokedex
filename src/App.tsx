@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import HeroSection from './components/hero'
 import Navbar from './components/navbar/Index'
-import SearchBar from './components/pokeSearch'
+import SearchBar from './components/navbar/pokeSearch'
 import { getAllPokemons, getPokemon } from './helpers/getData'
 import { Datainfo, Pokemon } from './interfaces/interfaces'
 

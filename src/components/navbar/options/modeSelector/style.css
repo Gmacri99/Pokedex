@@ -1,0 +1,34 @@
+.selector-mode{
+    width: 40%;
+    height: 65%;
+    gap: .5rem;
+    border: 0.87px solid #42537C;
+    border-radius: 100px;
+    background: linear-gradient(180deg, #162248 0%, #2C3150 100%);
+    cursor: pointer;
+    position: relative;
+}
+
+.container-dark-active{
+height: 90%;
+width: 50%;
+position: absolute;
+right: 6.5%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+border-radius: 100px;
+
+}
+
+.dark-active{
+    height: 95%;
+    border: 1px solid  #95acff94;
+    width: 99%;
+    border-radius: 120px;
+    background-color: #1D2C5E;
+}
+
+
+
