@@ -1,0 +1,8 @@
+.container-search{
+    background-color: rgb(255, 81, 0);
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,7 @@
+.container-navbar{
+    background-color: aqua;
+    width: 100%;
+    height: 5.5rem;
+    max-height: 123px;
+    display: flex;
+}

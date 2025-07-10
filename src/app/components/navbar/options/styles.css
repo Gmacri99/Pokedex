@@ -1,0 +1,8 @@
+.container-options{
+    background-color: rgb(47, 0, 255);
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
