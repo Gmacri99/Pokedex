@@ -1,12 +1,18 @@
+import { ArrowDown } from '@/app/common/arrowSvg';
+import { FlagOption } from './Flag/languageSelector';
 import  './styles.css'
 
 
 export const LanguageSelector = () => {
   return (
     <>
-        <div className='container-search'>
+        <button className='container-language'>
+          
+          <FlagOption/>
 
-        </div>
+          <ArrowDown/>
+
+        </button>
     </>
   );
 }
