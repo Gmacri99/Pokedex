@@ -13,13 +13,15 @@ export const getAllPokemons = async () =>{
 
 export const getPokemon = async (name:string) =>{
     try {
-        const response = await axios.get(routeAPI.Pokemon+name)
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
         return response.data;
     } catch (error) {
         console.error('Error fetching Pokémon data:', error);
         return null
     }
 }
+
+
 
 export const getLanguage = async (id:number=1) =>{
     try {
