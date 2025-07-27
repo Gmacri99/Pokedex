@@ -1,39 +1,44 @@
 import { Pokemon } from '@/app/types/Pokemons';
 import  './styles.css'
+import Image from 'next/image';
+import { ContainerType } from '../containerType/cardResult';
+import { capitalize } from '../functions';
 
 
 
 export const  CardResults = (pokemon:Pokemon) => {
 
+    const variable:string='containerResults';
+    const variableImagen:string='containerImage';
 
+    console.log(pokemon.type)
+    console.log(typeof(pokemon.type))
 
   return (
     <>
-        <div>
+        <div className={`${variable}`}>
+            <div className='container-elements'>
+                <div className='containerImage'>
+                <figure className='containerImage2'>
+                    <Image src={pokemon.url} alt={capitalize(pokemon.name)} fill/>
+                </figure>
+                </div>
 
-            <img src={pokemon.url} alt={pokemon.name} />
+                <div className='InfoPokemon'>
 
-            <div>
+                <div className='title-pokemon'>
 
-                <div>
-
-                    <h2>{pokemon.name}</h2>
-                    <p>N.° {pokemon.id}</p>
+                    <h2>{capitalize(pokemon.name)}</h2>
+                    <p className='pokemon-number'>N.° 000{pokemon.id}</p>
 
                 </div>
 
-                <div>
-
-                    <span>
-
-                        {/*<img src="" alt="" />*/}
-                        <p>{pokemon.type?.type?.name}</p>
-                        
-                    </span>
-                    
+                <div className='types-pokemon'>
+                    {pokemon.type.map((el, index)=><ContainerType key={index} type={el.type} slot={el.slot}/>)}
+                      
                 </div>
 
-                <a href={pokemon.id}>
+                <a className='redirectButton' href={pokemon.id}>
                     
                     <span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,8 +66,8 @@ export const  CardResults = (pokemon:Pokemon) => {
 
                 </a>
 
+                </div>
             </div>
-
         </div>
     </>
   );

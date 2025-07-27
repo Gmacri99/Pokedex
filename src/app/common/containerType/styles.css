@@ -1,0 +1,67 @@
+.typeContainer{
+    width: 50%;
+    height: 43px;
+    background-color: bisque;
+    border-radius: 10px;
+    padding-left: .2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: .75rem;
+}
+
+.typeContainer--card{
+    width: auto;
+    padding: 0rem .5rem;
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.typeContainer--card svg{
+    width: 1.25rem;
+    object-fit: contain;
+    height: 1.35rem;
+}
+
+.typeContainer--name{
+    font-weight: 700;
+    color:#343E62;
+    font-size: clamp(12.4px,1.25vw,1.25rem);
+    line-height: 100%;
+    margin-left: 1.75rem;
+}
+
+.type__poison{
+    background-color: #A33EA1;
+}
+
+.type__grass{
+    background-color: #3CB540;
+}
+
+
+.type__fire{
+    background-color:#FD7D24;
+}
+
+.type__ice{
+    background-color:#629ED3;
+}
+
+.type__flying{
+    background-color:#959FBB;
+}
+
+.type__psychic{
+    background-color:#F366B9;
+}
+
+

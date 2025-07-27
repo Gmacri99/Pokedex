@@ -1,3 +1,4 @@
+import React from "react";
 
 export interface DataBasic{
     name:string,
@@ -12,9 +13,14 @@ export interface TypePokemon{
 
 
 export interface Pokemon extends DataBasic{
-    type:TypePokemon,
+    type:TypePokemon[],
     id:string,
 }
+
+export type Item = {
+  name: string;
+  svg: React.ReactNode;
+};
 
 
 export interface PokemonDetails extends Pokemon{

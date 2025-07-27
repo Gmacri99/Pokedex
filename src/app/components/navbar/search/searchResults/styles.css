@@ -1,0 +1,22 @@
+.container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border:1px solid #42537C;
+    background-color: #E9ECF9;
+    width: 30%;
+    top: 50%;
+    gap: 1vh;
+    padding: .65rem 0rem;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+border-radius: 10px;
+    transform: translate(-50%,3.5%);
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}

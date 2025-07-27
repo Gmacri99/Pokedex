@@ -12,10 +12,9 @@ export const  ContainerResults = ({ data }: ContainerResultsProps) => {
 
   return (
     <>
-
-    {data?.map((el,index)=><CardResults key={index} name={el.name} type={el.type} url={el.url} id={el.id}/>)
-      
-    }
+    <div className='container'>
+      {data?.map((el,index)=><CardResults key={index} name={el.name} type={el.type} url={el.url} id={el.id}/>)}
+    </div>
     </>
   );
 }

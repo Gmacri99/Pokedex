@@ -57,14 +57,14 @@ export const  Search = () => {
       );
 
       if (existing) {
-        response.push(existing); // ya existe, lo usamos
+        response.push(existing); 
       }else{
       const dataInfo = await apiRequest('getPokemon',data[i].name)
           const dataDetails:Pokemon = {
             name:dataInfo.name,
             type:dataInfo.types,
             id:dataInfo.id,
-            url:dataInfo.sprites.other.home.front_default
+            url:dataInfo.sprites.other['official-artwork'].front_default
           }
           response.push(dataDetails);
     }  
@@ -76,19 +76,24 @@ export const  Search = () => {
     }
   }
 
-  const searchPokemon = async () =>{
-  }
+
   
 
   return (
     <>
-        <form onSubmit={searchPokemon} className='container-search'>
-            <input type="text" placeholder='prueba pokedex' value={name}  onChange={handleChange}/>
+    <div className='searchBar'>
+      <div className='ContainerFormStyles'>
+        <form className='FormStyles'>
+          <div className='FormStyles-container '>
+            <input className='FormStyles-input FormStylesBg__light'  type="text" placeholder='Search a pokémon' value={name}  onChange={handleChange}/>
+          </div>
         </form>
         {
-
-          <ContainerResults data={pokemonsFilter}/>
+          pokemonsFilter?.length > 0 ?
+          <ContainerResults data={pokemonsFilter}/> : null
         }
+      </div>
+    </div>
     </>
   );
 }

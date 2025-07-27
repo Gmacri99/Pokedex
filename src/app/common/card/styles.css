@@ -1,0 +1,97 @@
+.containerResults{
+    display: flex;
+    height: 18vh;
+    width: 95%;
+    border:1px solid #9DA9C4;
+    background-color: #DBDEF0;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-elements{
+    width: 95%;
+    height: 95%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 5%;
+}
+
+.containerImage{
+    width: 30%;
+    height: 90%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.containerImage2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.redirectButton{
+    background-color: white;
+    text-decoration: none;
+    font-weight: 700;
+    color:#343E62;
+    border:1px solid #9DA9C4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .7rem;
+    height: 30%;
+    width: 80%;
+    border-radius: 10px;
+    font-size: clamp(12.84px,1.15vw,1.15rem);
+    line-height: 100%;
+}
+
+.redirectButton svg{
+    width: 20px;
+    height: 20px;
+}
+
+.InfoPokemon{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 65%;
+    gap: .30rem;
+    height: 100%;
+}
+
+.InfoPokemon h2{
+    font-weight: 700;
+    color:#343E62;
+    font-size: clamp(15.4px,1.5vw,1.5rem);
+    line-height: 100%;
+}
+
+.pokemon-number{
+    font-weight: 400;
+    color:#797979;
+    line-height: 100%;
+    font-size: clamp(12.84px,1.25vw,1.25rem);
+}
+
+.title-pokemon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 25%;
+
+}
+
+.types-pokemon{
+    display: flex;
+    gap: .85rem;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
