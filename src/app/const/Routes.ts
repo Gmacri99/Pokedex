@@ -1,5 +1,5 @@
 export const routeAPI  = {
-    Language:`https://pokeapi.co/api/v2/language/`,
+    Language:`https://pokeapi.co/api/v2/pokemon-species/`,
     AllPokemon:`https://pokeapi.co/api/v2/pokemon?limit=2000&offset=0`,
     Pokemon:`https://pokeapi.co/api/v2/pokemon/`,
     Species:`https://pokeapi.co/api/v2/pokemon-species/`,

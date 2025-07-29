@@ -23,9 +23,9 @@ export const getPokemon = async (name:string) =>{
 
 
 
-export const getLanguage = async (id:number=1) =>{
+export const getLanguage = async (pokemon:number | string ) =>{
     try {
-        const response = await axios.get(routeAPI.Language + id)
+        const response = await axios.get(routeAPI.Language + pokemon)
         return response.data;
     } catch (error) {
         console.error('Error fetching Pokémon data:', error);

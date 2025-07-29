@@ -1,8 +1,12 @@
-.container-search{
-    background-color: rgb(255, 81, 0);
-    flex-grow: 1;
-    height: 100%;
+.container-language{
+    background-color: #DBDEF0;
+    width: 80px;
+    height: 61px;
     display: flex;
+    border: none;
     justify-content: center;
     align-items: center;
+    gap: .5rem;
+    border-radius: 100px;
+    cursor: pointer;
 }

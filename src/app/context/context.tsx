@@ -6,7 +6,7 @@ import { DataBasic, Pokemon } from '../types/Pokemons';
 import { apiRequest } from '../helpers/request/getData';
 import { parse } from 'path';
 
-type Language = 'es' | 'en';
+export type Language = 'es' | 'en' | 'fr' | 'it' | 'ger' | 'jp' | 'kr';
 
 type AppContextType = {
   darkMode: boolean;
@@ -19,7 +19,7 @@ type AppContextType = {
 const AppDefault:AppContextType = {
   darkMode: false,
   toggleDarkMode: () => {},
-  language: 'es',
+  language: 'en',
   setLanguage: (lang: Language) => {},
 }
 
@@ -38,7 +38,7 @@ export const  AppProvider =  ({ children }: { children: ReactNode }) => {
     console.log(storedTheme)
 
     storedTheme !==null ? setDarkMode(storedTheme=='true') : setDarkMode(false) ;
-    storedLang === null ? setLanguage('es') : setLanguage(storedLang as Language);
+    storedLang === null ? setLanguage('en') : setLanguage(storedLang as Language);
     
   }, []);
 
