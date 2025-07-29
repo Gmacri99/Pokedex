@@ -34,12 +34,13 @@ export const getLanguage = async (pokemon:number | string ) =>{
 }
 
 
-export const apiRequest = async (Request:any,body?:any) => {
+export const apiRequest = async (Request:string,body?:string) => {
     switch (Request) {
         case 'getAllPokemon':
         return getAllPokemons()
 
         case 'getPokemon':
-        return getPokemon(body)
+            
+        return body ? getPokemon(body) : ''
     }
 }

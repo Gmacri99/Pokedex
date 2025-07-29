@@ -1,8 +1,49 @@
-.container-search{
-    background-color: rgb(255, 81, 0);
-    flex-grow: 1;
-    height: 100%;
+
+.containerDisplay{
+    height: 62px;
+    width: 115px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 100px;
+    background-color: #DBDEF0;
+}
+
+.containerDisplay--button{
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    display: flex; 
+    gap: 1rem;
+    position: relative;
+    padding-right: .5rem;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+}
+
+.circle{
+    border-radius: 100px;
+    width:51px;
+    height:51px;
+    display: block;
+    position: absolute;
+    transition: all 1s ease;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    left: 0%;
+}
+
+.circle__light{
+    background-color: #FFF;
+    box-shadow: 0px 4px 8.2px 0px #00000026;
+    transform: translate(5%,-50%);
+}
+
+.circle__dark{
+    background-color: #1D2C5E;
+    box-shadow: 0px -1px 1.6px 0px #FFFFFF40 inset;
+    transform: translate(110%,-50%);
 }

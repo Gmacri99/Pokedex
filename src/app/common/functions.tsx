@@ -7,11 +7,10 @@ export function capitalize(word: string): string {
 }
 
 
-export function renderIconSpan(items: Item[], targetName: string, render?: (item: Item) => JSX.Element): JSX.Element | null {
+export function renderIconSpan(items: Item[],  targetName: string,className?:string, render?: (item: Item) => JSX.Element, ): JSX.Element | null {
   
     const foundItem = items.find((el) => el.name === targetName);
-  
   if (!foundItem) return null;
 
-  return render ? render(foundItem) : <span>{foundItem.svg}</span>;
+  return render ? render(foundItem) : <span className={className}>{foundItem.svg}</span>;
 }

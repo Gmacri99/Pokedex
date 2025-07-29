@@ -21,8 +21,3 @@ export type Item = {
   name: string;
   svg: React.ReactNode;
 };
-
-
-export interface PokemonDetails extends Pokemon{
-
-}

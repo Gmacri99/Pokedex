@@ -1,53 +1,54 @@
-
 'use client'
 
-import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
-import { DataBasic, Pokemon } from '../types/Pokemons';
-import { apiRequest } from '../helpers/request/getData';
-import { parse } from 'path';
+import { createContext, useContext, useState, ReactNode, useEffect } from 'react'
 
-export type Language = 'es' | 'en' | 'fr' | 'it' | 'ger' | 'jp' | 'kr';
+export type Language = 'es' | 'en' | 'fr' | 'it' | 'ger' | 'jp' | 'kr'
 
 type AppContextType = {
-  darkMode: boolean;
-  toggleDarkMode: () => void;
-  language: Language;
-  setLanguage: (lang: Language) => void;
+  darkMode: boolean
+  toggleDarkMode: () => void
+  language: Language
+  setLanguage: (lang: Language) => void
+}
 
-};
-
-const AppDefault:AppContextType = {
+const AppDefault: AppContextType = {
   darkMode: false,
   toggleDarkMode: () => {},
   language: 'en',
-  setLanguage: (lang: Language) => {},
+  setLanguage: () => {},
 }
 
-const AppContext = createContext<AppContextType | undefined>(undefined);
+const AppContext = createContext<AppContextType | undefined>(undefined)
 
-export const  AppProvider =  ({ children }: { children: ReactNode }) => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [language, setLanguage] = useState<Language>(AppDefault.language);
+export const AppProvider = ({ children }: { children: ReactNode }) => {
+  // ✅ Valores seguros por defecto
+  const [darkMode, setDarkMode] = useState(false)
+  const [language, setLanguage] = useState<Language>('en')
 
-  // Persistencia opcional en localStorage
+  // ✅ Sincronizar con localStorage después del montaje
   useEffect(() => {
-    const storedTheme = localStorage.getItem('darkMode');
-    const storedLang = localStorage.getItem('language');
+    const storedTheme = localStorage.getItem('darkMode')
+    const storedLang = localStorage.getItem('language')
 
-    console.log(storedLang)
-    console.log(storedTheme)
+    if (storedTheme !== null) {
+      setDarkMode(storedTheme === 'true')
+    }
 
-    storedTheme !==null ? setDarkMode(storedTheme=='true') : setDarkMode(false) ;
-    storedLang === null ? setLanguage('en') : setLanguage(storedLang as Language);
-    
-  }, []);
+    if (
+      storedLang &&
+      ['es', 'en', 'fr', 'it', 'ger', 'jp', 'kr'].includes(storedLang)
+    ) {
+      setLanguage(storedLang as Language)
+    }
+  }, [])
 
+  // ✅ Guardar cambios en localStorage
   useEffect(() => {
-    localStorage.setItem('darkMode', String(darkMode));
-    localStorage.setItem('language', language);
-  }, [darkMode, language]);
+    localStorage.setItem('darkMode', String(darkMode))
+    localStorage.setItem('language', language)
+  }, [darkMode, language])
 
-  const toggleDarkMode = () => setDarkMode(prev => !prev);
+  const toggleDarkMode = () => setDarkMode((prev) => !prev)
 
   return (
     <AppContext.Provider
@@ -60,10 +61,10 @@ export const  AppProvider =  ({ children }: { children: ReactNode }) => {
     >
       {children}
     </AppContext.Provider>
-  );
-};
+  )
+}
 
 export const useAppContext = () => {
-  const context = useContext(AppContext);
-  return context ?? AppDefault;
-};
+  const context = useContext(AppContext)
+  return context ?? AppDefault
+}

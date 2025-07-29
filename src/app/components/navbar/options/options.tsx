@@ -15,7 +15,7 @@ export const Options = () => {
         <div className='container-options'>
           <LanguageSelector handleOpen={() => setIsOpen(prev => !prev)}/>
           <DisplayMode/>
-          <ContainerLanguage isOpen={isOpen}/>
+          <ContainerLanguage isOpen={isOpen} setIsOpen={()=>setIsOpen(false)}/>
         </div>
     </>
   );

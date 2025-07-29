@@ -9,10 +9,7 @@ import { capitalize } from '../functions';
 export const  CardResults = (pokemon:Pokemon) => {
 
     const variable:string='containerResults';
-    const variableImagen:string='containerImage';
 
-    console.log(pokemon.type)
-    console.log(typeof(pokemon.type))
 
   return (
     <>
